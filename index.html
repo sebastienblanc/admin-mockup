@@ -1,0 +1,111 @@
+<html lang="en" data-framework="angularjs" ng-controller="GlobalCtrl" data-ember-extension="1" class="ng-scope"><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}</style>
+    <meta charset="utf-8">
+    <title ng-bind-template="LiveOak - LiveOak Admin Console" class="ng-binding">LiveOak - LiveOak Admin Console</title>
+
+    <!-- Frameworks -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!--<link rel="stylesheet" href="/admin/console/lib/bootstrap/dist/css/bootstrap.css">-->
+    <link href="http://fonts.googleapis.com/css?family=Exo+2:300,300italic,400,400italic,600,600italic" rel="stylesheet" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- PatternFly/RCUE Styles -->
+    <link rel="stylesheet" href="css/patternfly.css">
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="css/console.css">
+
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+<style type="text/css"></style></head>
+
+<body class="app-dashboard" data-ember-extension="1" style="">
+
+    <div class="feedback-aligner ng-hide" data-ng-show="notifications.data.length &gt; 0">
+        <!-- ngRepeat: notification in notifications.data -->
+    </div>
+
+    <div class="row">
+        <header>
+        <nav class="navbar navbar-default navbar-pf">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">
+                    <h1>AeroGear UnifiedPush Server</h1>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-utility">
+                    <li class="dropdown">
+                        <a href="#" class="lo-user dropdown-toggle ng-binding" data-toggle="dropdown">
+                            <span class="pficon pficon-user"></span>
+                            Jay Balunas <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Manage Account</a>
+                            </li>
+                            <li class="separator">
+                                <a href="#" ng-click="auth.logout()">Sign Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-primary">
+                    <li class="dropdown context col-md-2">
+                        <a href="#/applications">
+                            Applications
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    </div>
+
+    <!-- ngView:  --><div data-ng-view="" id="lo-content-row" class="row lo-main-pane ng-scope"><aside class="lo-sidebar col-md-2 fixed clearfix ng-isolate-scope" ng-controller="AppDropdownCtrl" data-lo-current="storage" data-lo-apps="applications" data-lo-app="curApp">
+ 
+    <nav class="navbar navbar-vertical" role="navigation">
+        <div class="bs-sidebar">
+            <ul>
+                <li ng-class="{active: loCurrent == 'dashboard'}" class="dashboard"><a href="#/applications/admin/dashboard"><i class="fa fa-tachometer fa-3x"></i>Stats</a></li>
+                <li ng-class="{active: loCurrent == 'push'}" class="push"><a href="#"><i class="fa fa-mobile fa-4x"></i>Applications</a></li>
+            </ul>
+        </div>
+    </nav>
+</aside>
+
+<div class="col-md-10 lo-main-pane ng-scope">
+    <div class="row">
+        <div class="lo-content-area col-md-12">
+            <ol class="breadcrumb">
+                <li><a href="#/applications">Applications</a></li>
+                <li class="active">Mobile HR</li>
+            </ol>
+                <div>
+                    <a href="#/applications/admin/create-storage" class="btn btn-primary btn-lg" type="button">Add Variant...</a>
+                </div>
+            <h2>Variants<span class="ng-binding"> (6) </span></h2>
+
+            <div class="lo-page-info">
+                <p ng-show="resources" class="ng-hide">
+                    <span class="lo-emph">You have</span> <strong class="ng-binding">0</strong> storage resource(s).
+                </p>
+               
+            </div>
+
+            <!-- ngRepeat: s in resources -->
+
+        </div>
+    </div>
+</div></div>
+ <script src="js/bootstrap.js" type="text/javascript"></script>
+</body></html>
